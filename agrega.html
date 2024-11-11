@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width">
+
+ <title>Agregar</title>
+
+ <script type="module" src="lib/js/submitForm.js"></script>
+ <script type="module" src="lib/js/muestraError.js"></script>
+
+ <!-- Estilos CSS -->
+ <style>
+  /* Configuración básica del cuerpo */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+  }
+
+  /* Estilo del formulario */
+  form {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 500px;
+  }
+
+  h1 {
+      color: #00e676;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  p {
+      margin-bottom: 15px;
+      font-size: 0.9em;
+  }
+
+  a {
+      color: #00e676;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+
+  a:hover {
+      color: #81c784;
+  }
+
+  label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      background-color: #2e2e2e;
+      color: #e0e0e0;
+      border: 1px solid #555;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+  }
+
+  input:focus {
+      border-color: #00e676;
+  }
+
+  button {
+      padding: 10px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #00e676;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+      background-color: #66bb6a;
+      transform: scale(1.05);
+  }
+
+  /* Texto de campos obligatorios */
+  .required-text {
+      font-size: 0.85em;
+      color: #a5d6a7;
+  }
+</style>
+
+</head>
+
+<body>
+
+ <form onsubmit="submitForm('srv/gestor-agrega.php', event)
+    .then(modelo => location.href = 'index.html')
+    .catch(muestraError)">
+
+  <h1>Agregar</h1>
+
+  <p><a href="index.html">Cancelar</a></p>
+
+  <p>
+   <label>
+    Nombre *
+    <input name="nombre">
+   </label>
+  </p>
+
+  <p>
+    <label>
+     Apellido *
+     <input name="apellido">
+    </label>
+   </p>
+ 
+   
+  <p>
+    <label>
+     Cargo *
+     <input name="cargo">
+    </label>
+   </p>
+ 
+   
+  <p>
+    <label>
+     Departamento *
+     <input name="departamento">
+    </label>
+   </p>
+ 
+   <p>* Obligatorio</p>
+
+  
+
+  <p><button type="submit">Agregar</button></p>
+
+ </form>
+
+</body>
+
+</html>

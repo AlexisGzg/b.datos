@@ -1,0 +1,8 @@
+<?php
+
+const GESTOR = "GESTOR";
+const GES_ID = "GES_ID";
+const GES_NOMBRE = "GES_NOMBRE";
+const GES_APELLIDO = "GES_APELLIDO";
+const GES_CARGO = "GES_CARGO";
+const GES_DEPARTAMENTO = "GES_DEPARTAMENTO";
