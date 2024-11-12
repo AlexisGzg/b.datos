@@ -22,7 +22,7 @@ ejecutaServicio(function () {
    status: NOT_FOUND,
    title: "Pasatiempo no encontrado.",
    type: "/error/pasatiemponoencontrado.html",
-   detail: "No se encontró ningún pasatiempo con el id $idHtml.",
+   detail: "No se encontró ningún gestor con el id $idHtml.",
   );
  }
 
